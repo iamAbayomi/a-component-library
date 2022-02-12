@@ -30,9 +30,9 @@ const EditField = styled.input `
     width: 300px;
     height: 44px;
     display: block;
-    padding-left: 30px;
+    padding-left: 38px;
     margin-top: 10px;
     margin-bottom: 20px ;
-    border: 2px solid #BDBDBD;
-    border-radius: 10px;
+    border: 2px solid #6c757d2b;
+    border-radius: 5px;
 `
