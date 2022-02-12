@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import OverviewCard from "./OverviewCard";
 
 export default {
-    title: 'OverviewCard',
+    title: 'Design System/OverviewCard',
     component: OverviewCard
 } as ComponentMeta<typeof OverviewCard>
 

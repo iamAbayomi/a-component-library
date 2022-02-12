@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import Card from './Card'
 
 export default{
-    title: 'Card',
+    title: 'Design System/Card',
     component: Card
 } as ComponentMeta <typeof Card>
 

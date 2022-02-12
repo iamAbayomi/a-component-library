@@ -3,7 +3,7 @@ import Badge from "./Badge";
 
 
 export default {
-    title: 'Badge',
+    title: 'Design System/Badge',
     component: Badge
 } as ComponentMeta <typeof Badge>
 

@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 
 
 export default {
-    title: 'Avatar',
+    title: 'Design System/Avatar',
     component: Avatar
 } as ComponentMeta <typeof Avatar >
 

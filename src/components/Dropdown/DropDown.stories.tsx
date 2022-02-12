@@ -3,7 +3,7 @@ import DropDown from "./DropDown";
 import '../../Overview.css'
 
 export default {
-    title: 'Dropdown',
+    title: 'Design System/Dropdown',
     component: DropDown
 } as ComponentMeta <typeof DropDown>
 

@@ -3,7 +3,7 @@ import Typography from "./Typography";
 
 
 export default {
-    title: 'Typography',
+    title: 'Design System/Typography',
     compoent: Typography
 } as ComponentMeta <typeof Typography>
 
