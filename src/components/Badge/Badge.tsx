@@ -131,7 +131,7 @@ export default class Badge extends React.Component<MyProps>{
 const BadgeCard = styled.div `
     box-sizing: border-box;
     color: white;
-    width: 111px;
+    max-width: max-content;
     height: 30px;
     border-radius: 215px;
     margin: 0px;
