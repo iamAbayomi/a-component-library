@@ -26,7 +26,7 @@ function App(){
             <InputField type={"Name"} placeholder={"Name"} />
             <Modal children={<p>Hello</p>} />
             <OverviewCard percentageText={"Testing"} percentage={0} />
-            <Table tableColums={["Name","Role"]} tableData={[["John", "Admin"]]} />
+            {/* <Table tableColums={["Name","Role"]} tableData={[["John", "Admin"]]} /> */}
             <Typography fontSize={"42px"} text={"x-Large"} fontWeight={"500"} lineHeight={"44px"} />
             
         </div>
