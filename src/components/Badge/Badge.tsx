@@ -13,20 +13,20 @@ export default class Badge extends React.Component<MyProps>{
     
     state = {
        statusText: this.props.text,
-       backgroundColor: ''
+       backgroundColor: this.props.backgroundColor
     }
 
     componentDidMount(){
         if(this.props.text){
             switch(this.props.text.toLowerCase()){
                 case "active":
-                    this.setState({backgroundColor : 'rgba(93, 248, 136, 1)' })
+                    this.setState({backgroundColor : '#27c327' })
                     break;
                 case "block":
                     this.setState({  backgroundColor : 'red' })
                     break;
                 case "successful":
-                    this.setState({backgroundColor : 'rgba(93, 248, 136, 1)' })
+                    this.setState({backgroundColor : '#27c327' })
                     break;
                 case "cancelled":
                     this.setState({  backgroundColor : 'red' })
@@ -41,7 +41,7 @@ export default class Badge extends React.Component<MyProps>{
                     this.setState({backgroundColor: 'red'})
                     break;
                 case "completed":
-                    this.setState({backgroundColor : 'rgba(93, 248, 136, 1)' })
+                    this.setState({backgroundColor : '#27c327' })
                     break;
                 case "failed":
                     this.setState({backgroundColor : 'red' })
@@ -49,6 +49,17 @@ export default class Badge extends React.Component<MyProps>{
                 case "in progress":
                     this.setState({ backgroundColor : "rgba(1, 0, 102, 1)" })
                     break;
+                case "false":
+                    this.setState({ text : "Active" })
+                    this.setState({ backgroundColor : "rgba(93, 248, 136, 1)" })
+                    break;
+                case "true":
+                    this.setState({ text : "Inactive" })
+                    this.setState({ backgroundColor : "rgba(130, 130, 130, 1)" })
+                    break;
+                    default:
+                        this.setState({ backgroundColor : "rgba(1, 0, 102, 1)" });
+                        break
                     
             }
             console.log('This is the props', this.props.text)
@@ -63,20 +74,20 @@ export default class Badge extends React.Component<MyProps>{
         
         }
         
-            }
+    }
         
         
             onChangeBackgroundColor = () => {
         
                     switch(this.props.text.toLowerCase()){
                         case "active":
-                            this.setState({backgroundColor : 'green' })
+                            this.setState({backgroundColor : '#27c327' })
                             break;
                         case "block":
                             this.setState({  backgroundColor : 'red' })
                             break;
                         case "successful":
-                            this.setState({backgroundColor : 'rgba(93, 248, 136, 1)',text:"successful"  })
+                            this.setState({backgroundColor : '#27c327',text:"successful"  })
                             break;
                         case "cancelled":
                             this.setState({  backgroundColor : 'red',text:"cancelled" })
@@ -91,7 +102,7 @@ export default class Badge extends React.Component<MyProps>{
                             this.setState({backgroundColor: 'red'})
                             break;
                         case "completed":
-                            this.setState({backgroundColor : 'rgba(93, 248, 136, 1)' })
+                            this.setState({backgroundColor : '#27c327' })
                             break;
                         case "failed":
                             this.setState({backgroundColor : 'red' })
