@@ -16,7 +16,7 @@ const Button: React.FC<props> = (props) => {
         <div>
             <ButtonStyle style={
                     {
-                        width: `${props.width}`,
+                        // width: `${props.width}`,
                         height: `${props.height}`,
                         color: `${props.color}`,
                         backgroundColor: `${props.backgroundColor}`,
@@ -37,10 +37,13 @@ const Button: React.FC<props> = (props) => {
 export default Button
 
 const ButtonStyle = styled.button ` 
+    max-width: max-content;
     display: block;
     border-radius: 100px;
     /* Add shadows to create the "card" effect */
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+    padding: 0px 30px;
+    font-weight: 600;
     transition: 0.3s; 
 
 `
