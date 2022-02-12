@@ -1,17 +1,16 @@
-// import { ComponentMeta, ComponentStory } from "@storybook/react";
-// import DropDown from "./DropDown";
-// import '../../Overview.css'
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import DropDown from "./DropDown";
+import '../../Overview.css'
 
-// export default {
-//     title: 'Dropdown',
-//     component: DropDown
-// } as ComponentMeta <typeof DropDown>
+export default {
+    title: 'Dropdown',
+    component: DropDown
+} as ComponentMeta <typeof DropDown>
 
 
-// const Template: ComponentStory<typeof DropDown> = (args) => <DropDown {...args} />
+const Template: ComponentStory<typeof DropDown> = (args) => <DropDown {...args} />
 
-// //export const Primary = Template.bind({})
+//export const Primary = Template.bind({})
 
-// export const Primary : ComponentStory<typeof DropDown> = () => <DropDown menuTitle={"work"} menuItem={['place', 'house']} />
+export const Primary : ComponentStory<typeof DropDown> = () => <DropDown menuTitle={"work"} menuItem={['place', 'house']} />
 
-export {}
