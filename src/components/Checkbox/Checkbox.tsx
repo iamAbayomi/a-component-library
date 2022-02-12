@@ -5,7 +5,7 @@ type props ={
     onChange?: () => {}
 }
 
-function Notification(props: props){
+function Checkbox(props: props){
     return(
         <div>
             <label className="switch">
@@ -20,4 +20,4 @@ function Notification(props: props){
     )
 }
 
-export default Notification
+export default Checkbox
