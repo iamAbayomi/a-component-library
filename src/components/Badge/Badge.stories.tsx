@@ -13,21 +13,30 @@ const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />
 export const active = Template.bind({})
 active.args = {text: 'active'}
 
-export const block: ComponentStory<typeof Badge> = () => <Badge text={'block'} />
+export const block = Template.bind({})
+block.args = { text: 'block' }
 
-export const successful: ComponentStory<typeof Badge> = () => <Badge text={'successful'} />
+export const successful = Template.bind({})
+successful.args = { text: 'successful' }
 
-export const cancelled: ComponentStory<typeof Badge> = () => <Badge text={'cancelled'} />
+export const cancelled = Template.bind({})
+cancelled.args = { text : 'cancelled' }
 
-export const pending: ComponentStory<typeof Badge> = () => <Badge text={'pending'} />
+export const pending  = Template.bind({})
+pending.args = { text: 'pending' }
 
-export const processing: ComponentStory<typeof Badge> = () => <Badge text={'processing'} />
+export const processing = Template.bind({})
+processing.args = { text: 'processing' }
 
-export const decline: ComponentStory<typeof Badge> = () => <Badge text={'decline'} />
+export const decline = Template.bind({})
+decline.args = { text: 'decline' }
 
-export const failed: ComponentStory<typeof Badge> = () => <Badge text={'failed'} />
+export const failed = Template.bind({})
+failed.args = { text: 'failed' }
 
-export const inProgess: ComponentStory<typeof Badge> = () => <Badge text={'in progress'} />
+export const inProgress = Template.bind({})
+inProgress.args = { text: 'in progress'}
 
-export const completed: ComponentStory<typeof Badge> = () => <Badge text={'completed'} />
+export const completed = Template.bind({})
+completed.args = { text: 'completed' }
 
