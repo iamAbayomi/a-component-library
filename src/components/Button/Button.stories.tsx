@@ -10,9 +10,9 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 // export const Normal: ComponentStory<typeof Button> = () => <Button buttonText={""} />
 
 export const Primary  = Template.bind({})
-Primary.args = {width: '134px', height: '42px', color: 'white', margin: '20px' , backgroundColor: 'blue', buttonText: 'Primary', onClick: () =>{}}
+Primary.args = {width: '134px', height: '42px', color: 'white', margin: '20px' , backgroundColor: '#2196F3', buttonText: 'Primary', onClick: () =>{}}
 
 export const Secondary = Template.bind({})
-Secondary.args = {width: '134px', height: '42px', color: 'blue', margin: '20px' , backgroundColor: 'white', buttonText: 'Secondary', onClick: () =>{}}
+Secondary.args = {width: '134px', height: '42px', color: '#2196F3', margin: '20px' , backgroundColor: 'white', buttonText: 'Secondary', onClick: () =>{}}
 
 
