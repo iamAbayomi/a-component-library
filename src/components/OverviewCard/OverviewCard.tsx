@@ -21,7 +21,7 @@ const OverviewCard: React.FC<props> = (props) => {
                             <CircularProgressbar 
                                 value={props.percentage} 
                                 text={`${props.percentage}`} 
-                                styles={buildStyles({pathColor : '#2196F3', textColor: '#2196F3' } )}/>
+                                styles={buildStyles({pathColor : '#0b4d81', textColor: '#0b4d81' } )}/>
                         </div>
                     </CircularProgressGroup> 
                     <p className="transaction-text">{props.percentageText}</p>
