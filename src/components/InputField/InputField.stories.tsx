@@ -6,5 +6,5 @@ export default {
     component: InputField
 } as ComponentMeta <typeof InputField >
 
-export const primary : ComponentStory <typeof InputField> = () => <InputField type={"name"} placeholder={"same"} />
+export const primary : ComponentStory <typeof InputField> = () => <InputField type={"name"} placeholder={"John Doe"} />
 
