@@ -279,9 +279,9 @@ body > div > p{
 
 
 input:focus, textarea:focus, select:focus, button:focus{
-    outline: #BDBDBD;
-    border: 1px solid #BDBDBD;
-    box-shadow: 0 0 0px #BDBDBD;
+    outline: #2196F3;
+    border: 1px solid #2196F3;
+    box-shadow: 0 0 0px #2196F3;
     
   }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
