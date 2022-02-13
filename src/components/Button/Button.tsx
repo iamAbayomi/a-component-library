@@ -3,10 +3,10 @@ import React, { MouseEventHandler } from 'react'
 type props ={
     width: string,
     height: string,
-    color: string,
-    margin: string,
-    backgroundColor: string
-    buttonText: string,
+    color?: string,
+    margin?: string,
+    backgroundColor?: string
+    buttonText?: string,
     onClick? : MouseEventHandler<HTMLButtonElement>
 }
 
