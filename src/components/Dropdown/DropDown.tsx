@@ -20,7 +20,7 @@ const DropDown: React.FC<props> = (props) => {
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                     {props.menuItem.map((item : any) => (
-                        <Dropdown.Item href=" " onClick={props.onClick}>{item}</Dropdown.Item>
+                        <Dropdown.Item href="#" onClick={props.onClick}>{item}</Dropdown.Item>
                     ))}
                 </Dropdown.Menu>
             </Dropdown>
