@@ -1,6 +1,11 @@
 import styled from "styled-components"
 import React from "react"
 
+/**
+- Use an avatar for attributing actions or content to specific users.
+- The user's name should always be present when using Avatar – either printed beside the avatar or in a tooltip.
+    @method
+**/
 
 export interface props {
     imageSrc: string

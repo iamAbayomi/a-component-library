@@ -4,7 +4,10 @@ import Avatar from "./Avatar";
 
 export default {
     title: 'Design System/Avatar',
-    component: Avatar
+    component: Avatar,
+    parameters: {
+        description: 'fafaf'
+    }
 } as ComponentMeta <typeof Avatar >
 
 // This is the avatar documentation
