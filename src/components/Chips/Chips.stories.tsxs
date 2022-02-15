@@ -1,13 +1,13 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Chips from "./Chips";
-import ChipsStories from './documentation.mdx'
+// import ChipsStories from './documentation.mdx'
 
 export default {
     title: 'Chips',
     component: Chips,
     parameters: {
       docs: {
-        page: ChipsStories,
+   //     page: ChipsStories,
       },
     },
   
