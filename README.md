@@ -12,14 +12,15 @@
 - [Credits](#credits)
 - [License](#license)
 
-## About The App
 
-Motivation.  
-This project to learn how to build a react component library. You can check the storybook canvas and documentation on chromatic at [https://6207da00fd8970003a4b561e-ujfarttnqg.chromatic.com/](https://6207da00fd8970003a4b561e-ujfarttnqg.chromatic.com/)
+### Motivation.  
+---
+
+The aim of this project was to learn how to build a react component library. You can check the storybook canvas and documentation on chromatic at [https://6207da00fd8970003a4b561e-ujfarttnqg.chromatic.com/](https://6207da00fd8970003a4b561e-ujfarttnqg.chromatic.com/)
   
     
 
-### The components in the project are
+The components in the project are
 
 - `Avatar` 
 
@@ -51,16 +52,30 @@ This project to learn how to build a react component library. You can check the 
 
 
 # Installation 
-- download or clone the repository
+To download and install the component library
 ```
-///to download 
-run `npm install spiinge-comp-lib`
-
-then run `npm run storybook` to display the components
+npm install spiinge-comp-lib
 ```
 
-## Approach
-I developed the components and added the stories file to display the stories in storybook
+# Usage
+
+Here is a quick example to help you get started. 
+
+```
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Badge from 'spiinge-comp-lib'
+
+
+function App(){
+    return(
+        <Badge text='successful' />
+    )
+}
+
+ReactDOM.render(<App />, document.querySelector('#app'));
+
+```
 
 ## Status
 `Design system` is still in progress. `Version 2` will be out soon.
