@@ -52,8 +52,12 @@ This project to learn how to build a react component library. You can check the 
 
 # Installation 
 - download or clone the repository
-- run `npm install`
-- then run `npm run storybook` to display the components
+```
+///to download 
+run `npm install spiinge-comp-lib`
+
+then run `npm run storybook` to display the components
+```
 
 ## Approach
 I developed the components and added the stories file to display the stories in storybook
