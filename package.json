@@ -1,6 +1,6 @@
 {
-  "name": "spiinge-comp-lib",
-  "version": "1.0.1",
+  "name": "spiinge-components",
+  "version": "1.0.0",
   "description": "A component library in react,typescript",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
