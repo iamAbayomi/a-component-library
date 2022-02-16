@@ -1,6 +1,5 @@
 # React Component Library
 
-This project was built with the aim of learning how to build a react component library. 
 
 ![example workflow](https://github.com/iamAbayomi/design-system/actions/workflows/push.yml/badge.svg)
 
@@ -35,7 +34,7 @@ function App(){
 ReactDOM.render(<App />, document.querySelector('#app'));
 
 ```
-The projects contains these components 
+The library contains these components 
 
 - `Avatar` 
 
