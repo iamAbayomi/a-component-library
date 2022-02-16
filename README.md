@@ -11,7 +11,7 @@
 # Installation 
 To download and install the component library
 ```bash
-npm install spiinge-comp-lib
+npm i spiinge-components
 
 ```
 
