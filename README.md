@@ -1,26 +1,41 @@
-# Design System
+# React Component Library
+
+This project was built with the aim of learning how to build a react component library. 
+
+![example workflow](https://github.com/iamAbayomi/design-system/actions/workflows/push.yml/badge.svg)
 
 
-## Table of Content:
 
-- [About The App](#about-the-app)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Approach](#approach)
-- [Status](#status)
-- [Credits](#credits)
-- [License](#license)
+![Image](https://raw.githubusercontent.com/iamAbayomi/design-system/master/public/screenshot.png)
 
 
-### Motivation.  
----
+# Installation 
+To download and install the component library
+```bash
+npm install spiinge-comp-lib
 
-The aim of this project was to learn how to build a react component library. You can check the storybook canvas and documentation on chromatic at [https://6207da00fd8970003a4b561e-ujfarttnqg.chromatic.com/](https://6207da00fd8970003a4b561e-ujfarttnqg.chromatic.com/)
-  
-    
+```
 
-The components in the project are
+# Usage
+
+To use the component library
+
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Badge from 'spiinge-comp-lib'
+
+
+function App(){
+    return(
+        <Badge text='successful' />
+    )
+}
+
+ReactDOM.render(<App />, document.querySelector('#app'));
+
+```
+The projects contains these components 
 
 - `Avatar` 
 
@@ -45,43 +60,11 @@ The components in the project are
 
 - `Typography`
 
-
-## Screenshots
-
-![Image](https://raw.githubusercontent.com/iamAbayomi/design-system/master/public/screenshot.png)
-
-
-# Installation 
-To download and install the component library
-```
-npm install spiinge-comp-lib
-```
-
-# Usage
-
-Here is a quick example to help you get started. 
-
-```
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Badge from 'spiinge-comp-lib'
-
-
-function App(){
-    return(
-        <Badge text='successful' />
-    )
-}
-
-ReactDOM.render(<App />, document.querySelector('#app'));
-
-```
-
-## Status
-`Design system` is still in progress. `Version 2` will be out soon.
+You can view the storybok canvas and documentation on chromatic at [https://6207da00fd8970003a4b561e-ujfarttnqg.chromatic.com/](https://6207da00fd8970003a4b561e-ujfarttnqg.chromatic.com/) to see how the component look in your application.
+  
 
 ## Credits
-Resources: 
+
 
 - [Storybook's Design system for developers](https://storybook.js.org/tutorials/design-systems-for-developers/)
 
