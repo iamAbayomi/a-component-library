@@ -8,14 +8,7 @@ type props ={
 function Checkbox(props: props){
     return(
         <div>
-            <label className="switch">
-                <input 
-                    type="checkbox" 
-                    onChange={props.onChange} 
-                    value="true"
-                    checked={props.checkBoxValue}/>
-                <span className="slider round"></span>
-            </label>
+           <input type={"checkbox"} />
         </div>        
     )
 }
