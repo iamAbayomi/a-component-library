@@ -39,7 +39,7 @@ export default Button
 const ButtonStyle = styled.button ` 
     max-width: max-content;
     display: block;
-    border-radius: 100px;
+    border-radius: 5px;
     /* Add shadows to create the "card" effect */
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
     padding: 0px 30px;
