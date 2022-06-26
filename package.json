@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
     "build": "rollup -c",
     "chromatic": "npx chromatic --project-token=c5ea7f206016"
@@ -56,5 +56,11 @@
     "rollup-plugin-terser": "^7.0.2",
     "styled-components": "^5.3.3",
     "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "framer-motion": "^6.3.15"
   }
 }

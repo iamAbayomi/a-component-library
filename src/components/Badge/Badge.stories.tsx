@@ -11,32 +11,32 @@ export default {
 const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />
 
 export const active = Template.bind({})
-active.args = {text: 'active'}
+active.args = {text: 'Active'}
 
 export const block = Template.bind({})
-block.args = { text: 'block' }
+block.args = { text: 'Block' }
 
 export const successful = Template.bind({})
-successful.args = { text: 'successful' }
+successful.args = { text: 'Successful' }
 
 export const cancelled = Template.bind({})
-cancelled.args = { text : 'cancelled' }
+cancelled.args = { text : 'Cancelled' }
 
 export const pending  = Template.bind({})
-pending.args = { text: 'pending' }
+pending.args = { text: 'Pending' }
 
 export const processing = Template.bind({})
-processing.args = { text: 'processing' }
+processing.args = { text: 'Processing' }
 
 export const decline = Template.bind({})
-decline.args = { text: 'decline' }
+decline.args = { text: 'Decline' }
 
 export const failed = Template.bind({})
-failed.args = { text: 'failed' }
+failed.args = { text: 'Failed' }
 
 export const inProgress = Template.bind({})
-inProgress.args = { text: 'in progress'}
+inProgress.args = { text: 'In progress'}
 
 export const completed = Template.bind({})
-completed.args = { text: 'completed' }
+completed.args = { text: 'Completed' }
 
