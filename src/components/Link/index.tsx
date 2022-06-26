@@ -1,10 +1,19 @@
-const Link = () => {
-    return (
-        <div>
+import React from "react"
+import {Text, Link} from "@chakra-ui/react"
 
-        </div>
+type props = {
+    text: string
+    goToPage: string
+    target: string
+}
+
+const Index = ({text="Add the link to the props", goToPage, target}: props) => {
+    return (
+        <Link href={goToPage} target={"_blank"}>
+          <Text color="blue">{text}</Text>
+        </Link>
     )
 }
 
 
-export default Link
+export default Index
