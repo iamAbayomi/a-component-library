@@ -13,7 +13,7 @@ const Modal: React.FC<props> = (props) => {
     return(
         <div className="modal-container">
             <div className={`modal ${showModal ? "show-modal" : ""}`}>
-                <div className="modal-content">
+                <div className="modal-content" style={{width: "400px"}}>
                     <span className="close-button" onClick={toggleModal}>x</span>
                         {props.children}
                 </div>
