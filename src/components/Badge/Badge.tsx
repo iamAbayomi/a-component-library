@@ -1,5 +1,6 @@
 import  React from 'react'
 import styled from 'styled-components'
+import {Text } from "@chakra-ui/react"
 
 type MyProps ={
     text: string,
@@ -69,68 +70,65 @@ export default class Badge extends React.Component<MyProps>{
 
     componentDidUpdate(prevProps:any) {
         if(prevProps.text !== this.props.text){
-        console.log("CHIP STATUS HAS CHANGED")
-        this.onChangeBackgroundColor()
-        
+            console.log("CHIP STATUS HAS CHANGED")
+            this.onChangeBackgroundColor()
         }
+    }
+              
+    onChangeBackgroundColor = () => {
+
+            switch(this.props.text.toLowerCase()){
+                case "active":
+                    this.setState({backgroundColor : '#27c327' })
+                    break;
+                case "block":
+                    this.setState({  backgroundColor : 'red' })
+                    break;
+                case "successful":
+                    this.setState({backgroundColor : '#27c327',text:"successful"  })
+                    break;
+                case "cancelled":
+                    this.setState({  backgroundColor : 'red',text:"cancelled" })
+                    break;
+                case "pending":
+                    this.setState({ backgroundColor : "rgba(130, 130, 130, 1)" })
+                    break;
+                case "processing":
+                    this.setState({ backgroundColor : "rgba(1, 0, 102, 1)", text:"processing" })
+                    break;
+                case "decline":
+                    this.setState({backgroundColor: 'red'})
+                    break;
+                case "completed":
+                    this.setState({backgroundColor : '#27c327' })
+                    break;
+                case "failed":
+                    this.setState({backgroundColor : 'red' })
+                    break;
+                case "in progress":
+                    this.setState({ backgroundColor : "rgba(1, 0, 102, 1)" })
+                    break;
+                case "false":
+                    this.setState({ text : "Active" })
+                    this.setState({ backgroundColor : "rgba(93, 248, 136, 1)" })
+                    break;
+                case "true":
+                    this.setState({ text : "Inactive" })
+                    this.setState({ backgroundColor : "rgba(130, 130, 130, 1)" })
+                    break;
+                    default:
+                        this.setState({ backgroundColor : "rgba(1, 0, 102, 1)" });
+                        break
+                    
+            }
         
     }
-        
-        
-            onChangeBackgroundColor = () => {
-        
-                    switch(this.props.text.toLowerCase()){
-                        case "active":
-                            this.setState({backgroundColor : '#27c327' })
-                            break;
-                        case "block":
-                            this.setState({  backgroundColor : 'red' })
-                            break;
-                        case "successful":
-                            this.setState({backgroundColor : '#27c327',text:"successful"  })
-                            break;
-                        case "cancelled":
-                            this.setState({  backgroundColor : 'red',text:"cancelled" })
-                            break;
-                        case "pending":
-                            this.setState({ backgroundColor : "rgba(130, 130, 130, 1)" })
-                            break;
-                        case "processing":
-                            this.setState({ backgroundColor : "rgba(1, 0, 102, 1)", text:"processing" })
-                            break;
-                        case "decline":
-                            this.setState({backgroundColor: 'red'})
-                            break;
-                        case "completed":
-                            this.setState({backgroundColor : '#27c327' })
-                            break;
-                        case "failed":
-                            this.setState({backgroundColor : 'red' })
-                            break;
-                        case "in progress":
-                            this.setState({ backgroundColor : "rgba(1, 0, 102, 1)" })
-                            break;
-                        case "false":
-                            this.setState({ text : "Active" })
-                            this.setState({ backgroundColor : "rgba(93, 248, 136, 1)" })
-                            break;
-                        case "true":
-                            this.setState({ text : "Inactive" })
-                            this.setState({ backgroundColor : "rgba(130, 130, 130, 1)" })
-                            break;
-                            default:
-                                this.setState({ backgroundColor : "rgba(1, 0, 102, 1)" });
-                                break
-                            
-                    }
-                
-            }
 
     render(){
         return(
             <div>
                 <BadgeCard className="" style={{ backgroundColor: `${this.state.backgroundColor}` }}>
-                    <p className="chips-text">{this.props.text}</p>
+                    <Text>{this.props.text}</Text>
                 </BadgeCard>
             </div>
         )
