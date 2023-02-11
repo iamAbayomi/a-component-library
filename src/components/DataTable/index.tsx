@@ -3,7 +3,8 @@ import React from "react"
 const DataTable = () => {
     return (
         <div>
-            </div>
+
+        </div>
     )
 }
 
