@@ -9,7 +9,6 @@ export default {
 } as ComponentMeta<typeof ButtonGroup>;
 
 // const Template: ComponentStory<typeof Button> = (args) => <ButtonGroup {...args} />
-
 // export const Primary =
 
 export const Primary: ComponentStory<typeof ButtonGroup> = () => (

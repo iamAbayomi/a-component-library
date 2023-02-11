@@ -7,6 +7,7 @@ interface props {
   primaryText: string;
   secondaryText: string;
   buttonGap: string;
+  border?: string;
 }
 
 const ButtonGroup: FC<props> = ({
@@ -16,7 +17,7 @@ const ButtonGroup: FC<props> = ({
   ...props
 }) => {
   return (
-    <Box display={"flex"} gap={buttonGap ? buttonGap : "20px"}>
+    <Box display={"flex"} gap={buttonGap ? buttonGap : "20px"} {...props}>
       <Button
         width={"134px"}
         height={"42px"}
