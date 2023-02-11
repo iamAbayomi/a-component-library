@@ -1,3 +1,4 @@
+import React from "react";
 import Avatar from "./components/Avatar";
 import AvatarandName from "./components/AvatarAndName";
 import Badge from "./components/Badge/Badge";
@@ -10,7 +11,11 @@ import Modal from "./components/Modal/Modal";
 import OverviewCard from "./components/OverviewCard/OverviewCard";
 // import Table from "./components/Table/Table";
 import Typography from "./components/Typograpghy/Typography";
+import { colors } from "./themes";
 
+
+
+export {colors}
 
 export {Avatar}
 export {AvatarandName}
@@ -23,4 +28,4 @@ export {InputField}
 export {Modal}
 export {OverviewCard}
 // export {Table}
-export {Typography}
+export {Typography} 
