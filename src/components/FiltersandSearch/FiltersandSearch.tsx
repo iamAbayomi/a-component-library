@@ -3,7 +3,7 @@ import React, { CSSProperties, FC, HTMLAttributes } from "react";
 
 interface props {
   hideDropdown?: boolean;
-  dropdownOptions: string[];
+  dropdownOptions: any[];
   dropdownItemValue: string;
   dropdownItemName: string;
   dropdownStyle?: CSSProperties;
