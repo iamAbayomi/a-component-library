@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
-import { Box, Button, Image, Text } from "@chakra-ui/react";
+import { AspectRatio, Box, Button, Image, Text } from "@chakra-ui/react";
 import { AiOutlineUpload } from "react-icons/ai";
+import styled from "styled-components";
 
 type props = {
+  imageUrl: string;
   onUploadMethod: () => void;
 };
 
@@ -30,7 +32,7 @@ const FileUpload = (props: props) => {
         }}
         type={"file"}
         hidden
-        accept="image/png, image/jpeg, image/jpg"
+        accept="*"
       />
       <Box
         border={"1px dashed #80808096"}
@@ -41,7 +43,12 @@ const FileUpload = (props: props) => {
         onClick={handleClick}
       >
         {imageUrl ? (
-          <Image src={imageUrl} />
+          // <Image src={imageUrl} />
+          <AspectRatio>
+            <IFrame>
+              <iframe src={imageUrl} width={"100%"} height={"100%"} />
+            </IFrame>
+          </AspectRatio>
         ) : (
           <Box>
             <Box margin={"10px auto 0px"} maxW={"2.5rem"}>
@@ -73,3 +80,10 @@ const FileUpload = (props: props) => {
 };
 
 export default FileUpload;
+
+const IFrame = styled.div`
+  width: 100%;
+  //    height: 30px;
+  border: none;
+  object-fit: contain;
+`;
