@@ -1,4 +1,4 @@
-import { HTMLAttributes, CSSProperties } from "react";
+import { HTMLAttributes, CSSProperties, ChangeEvent } from "react";
 
 export interface IAppColors {
     primaryColor: string
@@ -18,4 +18,18 @@ export interface IButtonProps{
 export interface ICardProps{
     cardAttributes?: HTMLAttributes<HTMLDivElement>
     cardStyle?: CSSProperties
+}
+
+export interface IInputProps{
+    inputAttributes?: HTMLAttributes<HTMLInputElement>
+    inputStyle?: CSSProperties
+}
+
+export interface ICheckboxProps extends IInputProps{
+    id: string;
+    name: string;
+    checked?: boolean;
+    value?: string;
+    color?: string;
+    onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
 }

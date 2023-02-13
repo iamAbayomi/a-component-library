@@ -5,7 +5,7 @@ import { IButtonProps } from "../../utils/types";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
 
-interface props extends IButtonProps {
+export interface IImageCard extends IButtonProps {
   cardAttributes?: HTMLAttributes<HTMLDivElement>;
   cardStyle?: CSSProperties;
   imageSrc: string;
@@ -21,7 +21,7 @@ const ImageCard = ({
   imageStyle,
   buttonAttributes,
   buttonStyle
-}: props) => {
+}: IImageCard) => {
   return (
     <Card cardStyle={cardStyle} cardAttributes={cardAttributes}>
       <Image src={imageSrc} style={imageStyle} {...imageAttributes} />

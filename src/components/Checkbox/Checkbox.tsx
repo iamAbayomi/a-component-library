@@ -1,23 +1,24 @@
 import React, { ChangeEvent, FC } from "react";
 import { colors } from "../../themes";
+import { ICheckboxProps } from "../../utils/types";
 import "./Checkbox.css";
-type props = {
-  id: string;
-  name: string;
-  checked?: boolean;
-  value?: string;
-  color?: string;
-  onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
-};
+interface props extends ICheckboxProps {}
 
 const Checkbox: FC<props> = ({ color, ...props }) => {
   return (
     <div>
       <input
         type={"checkbox"}
-        style={{ accentColor: color ?? colors?.primaryColor }}
+        style={{
+          accentColor: color ?? colors?.primaryColor,
+          marginRight: "10px",
+          ...props.inputStyle
+        }}
+        {...props.inputAttributes}
         {...props}
       />
+      <label htmlFor={props.id}>{props.name}</label>
+      <br />
     </div>
   );
 };
