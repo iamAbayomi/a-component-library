@@ -11,9 +11,27 @@ const Template: ComponentStory<typeof FiltersandSearch> = (args) => (
   <FiltersandSearch {...args} />
 );
 
-function logToConsole() {
-  console.log("Filter And Search  clicked");
-}
+export const Default = Template.bind({});
+Default.args = {
+  dropdownOptions: [
+    { name: "Fola", value: 1 },
+    { name: "Tola", value: 2 },
+    { name: "Bola", value: 3 }
+  ],
+  dropdownAttributes: {
+    border: "1px solid grey",
+    borderRadius: "5px",
+    placeholder: "Name"
+  },
+  dropdownStyle: {
+    padding: "5px 10px 5px 10px"
+  },
+  dropdownItemValue: "value",
+  dropdownItemName: "name",
+  searchFieldStyle: {
+    border: "1px solid grey"
+  }
+};
 
 export const Primary: ComponentStory<typeof FiltersandSearch> = () => (
   <FiltersandSearch
@@ -25,27 +43,11 @@ export const Primary: ComponentStory<typeof FiltersandSearch> = () => (
     dropdownItemValue={"name"}
     dropdownItemName={"value"}
     dropdownAttributes={{
-      placeholder: "Select Name",
+      placeholder: "Name",
       onClick: () => console.log("I clicked the dropdown")
+    }}
+    searchFieldStyle={{
+      border: "1px solid grey"
     }}
   />
 );
-
-export const Default = Template.bind({});
-Default.args = {
-  dropdownOptions: [
-    { name: "Fola", value: 1 },
-    { name: "Tola", value: 2 },
-    { name: "Bola", value: 3 }
-  ],
-  dropdownAttributes: {
-    border: "1px solid red",
-    borderRadius: "5px",
-    placeholder: "Select Name"
-  },
-  dropdownStyle: {
-    padding: "5px 10px 5px 10px"
-  },
-  dropdownItemValue: "value",
-  dropdownItemName: "name"
-};

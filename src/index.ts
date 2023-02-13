@@ -10,7 +10,7 @@ import InputField from "./components/InputField/InputField";
 import Modal from "./components/Modal/Modal";
 import OverviewCard from "./components/OverviewCard/OverviewCard";
 // import Table from "./components/Table/Table";
-import Typography from "./components/Typograpghy/Typography";
+import Typography from "./components/Typography/Typography";
 import { colors } from "./themes";
 
 

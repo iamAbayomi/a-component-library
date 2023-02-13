@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import React, { MouseEventHandler } from "react";
 import { colors } from "../../themes";
-type props = {
+import { IButtonProps } from "../../utils/types";
+interface props extends IButtonProps {
   width: string;
   height: string;
   color?: string;
@@ -10,7 +11,7 @@ type props = {
   buttonText?: string;
   borderRadius?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
-};
+}
 
 // This component aims to determine the reusable component
 const Button: React.FC<props> = (props) => {
@@ -28,10 +29,12 @@ const Button: React.FC<props> = (props) => {
           border: `1px solid ${
             props.backgroundColor ? props.backgroundColor : colors?.primaryColor
           }`,
-          borderRadius: `${props.borderRadius ? props?.borderRadius : "8px"}`
+          borderRadius: `${props.borderRadius ? props?.borderRadius : "8px"}`,
+          ...props.buttonStyle
           // border: `1px solid grey`
         }}
         onClick={props.onClick}
+        {...props.buttonAttributes}
       >
         {props.buttonText}
       </ButtonStyle>

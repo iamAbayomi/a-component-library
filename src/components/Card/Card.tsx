@@ -1,15 +1,19 @@
-import { background } from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
+import { ICardProps } from "../../utils/types";
 
-type props = {
+interface props extends ICardProps {
   backgroundColor?: string;
   children?: any;
   padding?: string;
-};
+}
 
 const Card: React.FC<props> = ({ children, ...props }) => {
-  return <CardBody {...props}>{children}</CardBody>;
+  return (
+    <CardBody style={props.cardStyle} {...props.cardAttributes} {...props}>
+      {children}
+    </CardBody>
+  );
 };
 
 export default Card;

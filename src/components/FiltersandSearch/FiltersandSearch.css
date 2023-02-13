@@ -1,0 +1,7 @@
+select::-ms-expand{
+    display: none;
+}
+
+.chakra-select__icon-wrapper{
+    display: none !important;
+}
