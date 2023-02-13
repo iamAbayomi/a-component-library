@@ -20,6 +20,11 @@ export interface ICardProps{
     cardStyle?: CSSProperties
 }
 
+export interface IDivProps{
+    divAttributes?: HTMLAttributes<HTMLDivElement>
+    divStyle?: CSSProperties
+}
+
 export interface IInputProps{
     inputAttributes?: HTMLAttributes<HTMLInputElement>
     inputStyle?: CSSProperties
@@ -32,4 +37,9 @@ export interface ICheckboxProps extends IInputProps{
     value?: string;
     color?: string;
     onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface IParagraphProps {
+    paragraphAttributes?: HTMLAttributes<HTMLParagraphElement>
+    paragraphStyle?: CSSProperties
 }
