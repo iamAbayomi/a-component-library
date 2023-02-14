@@ -25,6 +25,11 @@ export interface IDivProps{
     divStyle?: CSSProperties
 }
 
+export interface ILabelProps{
+    labelAttributes?: HTMLAttributes<HTMLLabelElement>;
+    labelStyle?: CSSProperties;
+}
+
 export interface IInputProps{
     inputAttributes?: HTMLAttributes<HTMLInputElement>
     inputStyle?: CSSProperties
