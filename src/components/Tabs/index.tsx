@@ -1,9 +1,7 @@
+import React from "react";
+
 const Tabs = () => {
-    return (
-        <div>
+  return <div></div>;
+};
 
-        </div>
-    )
-}
-
-export default Tabs
+export default Tabs;
