@@ -43,3 +43,10 @@ export interface IParagraphProps {
     paragraphAttributes?: HTMLAttributes<HTMLParagraphElement>
     paragraphStyle?: CSSProperties
 }
+
+export interface IRadioButtonProps{
+    id: string
+    name: string
+    value: string
+    label: string
+}
