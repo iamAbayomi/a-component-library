@@ -12,6 +12,7 @@ import OverviewCard from "./components/OverviewCard/OverviewCard";
 // import Table from "./components/Table/Table";
 import Typography from "./components/Typography/Typography";
 import { colors } from "./themes";
+import "./styles/global.css"
 
 
 

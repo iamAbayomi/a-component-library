@@ -7,12 +7,15 @@ interface IProps {
   progessBarAttributes?: HTMLAttributes<HTMLProgressElement>;
 }
 
-const ProgressBar = ({ id, max, value, progessBarAttributes }: IProps) => (
-  <div>
-    <label htmlFor={id}>{id}</label>
-    <progress id={id} max={max} value={value} {...progessBarAttributes}>
-      {value}
-    </progress>
-  </div>
-);
+const ProgressBar = ({ id, max, value, progessBarAttributes }: IProps) => {
+  console.log("id ", id, " max ", max);
+  return (
+    <div>
+      <label htmlFor={id}>{id}</label>
+      <progress id={id} max={max} value={value} {...progessBarAttributes}>
+        {value}
+      </progress>
+    </div>
+  );
+};
 export default ProgressBar;

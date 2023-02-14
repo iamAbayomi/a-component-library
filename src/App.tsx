@@ -6,10 +6,8 @@ import Button from "./components/Button/Button";
 import Card from "./components/Card/Card";
 import Checkbox from "./components/Checkbox/Checkbox";
 import DropDown from "./components/Dropdown/DropDown";
-import InputField from "./components/InputField/InputField";
 import Modal from "./components/Modal/Modal";
 import OverviewCard from "./components/OverviewCard/OverviewCard";
-import Table from "./components/Table/Table";
 import Typography from "./components/Typography/Typography";
 
 function App() {
@@ -32,7 +30,7 @@ function App() {
       <Card />
       <Checkbox id={""} name={""} />
       <DropDown menuTitle={"work"} menuItem={["place", "house"]} />
-      <InputField type={"Name"} placeholder={"Name"} />
+     
       <Modal children={<p>Hello</p>} />
       <OverviewCard percentageText={"Testing"} percentage={0} />
       {/* <Table tableColums={["Name","Role"]} tableData={[["John", "Admin"]]} /> */}

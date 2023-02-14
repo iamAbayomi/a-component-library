@@ -16,5 +16,5 @@ Primary.args = {
   id: "progress bar",
   value: "20",
   max: "100",
-  progessBarAttributes: { accentColor: "red" }
+  progessBarAttributes: { accentcolor: "red" }
 };

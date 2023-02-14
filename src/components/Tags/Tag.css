@@ -1,0 +1,9 @@
+.tags{
+    max-width: max-content;
+    padding: 2px 5px;
+    font-size: 12px;
+    background-color: #1560D7;
+    color: white;
+    border-radius: 5px;
+    gap: 5px;
+}
