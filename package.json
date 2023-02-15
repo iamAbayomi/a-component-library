@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
+    "build-storybook": "build-storybook",
     "build": "rollup -c",
     "chromatic": "npx chromatic --project-token=c5ea7f206016"
   },
