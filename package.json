@@ -1,6 +1,6 @@
 {
   "name": "spiinge-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A component library in react,typescript",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
+    "build-storybook": "build-storybook",
     "build": "rollup -c",
     "chromatic": "npx chromatic --project-token=c5ea7f206016"
   },
@@ -37,6 +37,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
     "@types/react": "^17.0.39",
+    "@types/react-datepicker": "^4.8.0",
     "@types/styled-components": "^5.1.22",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.3",
@@ -61,6 +62,8 @@
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "framer-motion": "^6.3.15"
+    "framer-motion": "^6.3.15",
+    "react-datepicker": "^4.10.0",
+    "react-icons": "^4.7.1"
   }
 }

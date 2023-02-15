@@ -1,5 +1,6 @@
 import MediaCard from "./MediaCard" 
 import { ComponentMeta, ComponentStory } from "@storybook/react"
+import React from "react"
 
 
 export default {

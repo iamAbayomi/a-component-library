@@ -1,38 +1,19 @@
+import { Input } from "@chakra-ui/react";
 import React from "react";
-import { ChangeEventHandler } from "react";
-import styled from "styled-components";
+import { IInputProps } from "../../utils/types";
 
-type Props ={
-    type: string,
-    placeholder: string,
-    value?: string,
-    onChange?: ChangeEventHandler<HTMLInputElement>
+interface Props extends IInputProps {
+  value?: string;
 }
-
 
 const InputField: React.FC<Props> = (Props) => {
-    return(
-        <div>
-            <EditField
-                type={Props.type}
-                placeholder={Props.placeholder}
-                value={Props.value}
-                onChange={Props.onChange}
-            />
-        </div>
-    )
-}
+  return (
+    <Input
+      value={Props.value}
+      style={Props.inputStyle}
+      {...Props.inputAttributes}
+    />
+  );
+};
 
 export default InputField;
-
-
-const EditField = styled.input `
-    width: 300px;
-    height: 44px;
-    display: block;
-    padding-left: 18px;
-    margin-top: 10px;
-    margin-bottom: 20px ;
-    border: 0.1px solid #3333339c;
-    border-radius: 3px;
-`

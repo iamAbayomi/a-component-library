@@ -1,16 +1,26 @@
-import React from "react"
-import './Checkbox.css'
-type props ={
-    checkBoxValue?: boolean
-    onChange?: () => {}
-}
+import React, { ChangeEvent, FC } from "react";
+import { colors } from "../../themes";
+import { ICheckboxProps } from "../../utils/types";
+import "./Checkbox.css";
+interface props extends ICheckboxProps {}
 
-function Checkbox(props: props){
-    return(
-        <div>
-           <input type={"checkbox"} />
-        </div>        
-    )
-}
+const Checkbox: FC<props> = ({ color, ...props }) => {
+  return (
+    <div>
+      <input
+        type={"checkbox"}
+        style={{
+          accentColor: color ?? colors?.primaryColor,
+          marginRight: "10px",
+          ...props.inputStyle
+        }}
+        {...props.inputAttributes}
+        {...props}
+      />
+      <label htmlFor={props.id}>{props.name}</label>
+      <br />
+    </div>
+  );
+};
 
-export default Checkbox
+export default Checkbox;

@@ -1,3 +1,4 @@
+import React from "react";
 import Avatar from "./components/Avatar";
 import AvatarandName from "./components/AvatarAndName";
 import Badge from "./components/Badge/Badge";
@@ -9,8 +10,13 @@ import InputField from "./components/InputField/InputField";
 import Modal from "./components/Modal/Modal";
 import OverviewCard from "./components/OverviewCard/OverviewCard";
 // import Table from "./components/Table/Table";
-import Typography from "./components/Typograpghy/Typography";
+import Typography from "./components/Typography/Typography";
+import { colors } from "./themes";
+import "./styles/global.css"
 
+
+
+export {colors}
 
 export {Avatar}
 export {AvatarandName}
@@ -23,4 +29,4 @@ export {InputField}
 export {Modal}
 export {OverviewCard}
 // export {Table}
-export {Typography}
+export {Typography} 
