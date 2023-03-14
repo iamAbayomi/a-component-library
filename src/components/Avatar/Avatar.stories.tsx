@@ -2,14 +2,23 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import Avatar from "./Avatar";
 
-
 export default {
-    title: 'Design System/Avatar',
-    component: Avatar,
-    parameters: {
-        description: 'fafaf'
+  title: "Design System/Avatar",
+  component: Avatar,
+  argTypes: {
+    size: {
+      control: {
+        type: "select"
+      },
+      options: ["tiny", "small", "medium", "large"]
     }
-} as ComponentMeta <typeof Avatar >
+  },
+  parameters: {
+    description: "fafaf",
+    componentSubtitle:
+      "Displays an image that represents a user or organization."
+  }
+} as ComponentMeta<typeof Avatar>;
 
 // This is the avatar documentation
 
@@ -17,9 +26,9 @@ export default {
 //  *  This is the avatar documentation
 //  */
 
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />
+const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
-export const Primary = Template.bind({})
-Primary.args = {imageSrc: 'https://avatars2.githubusercontent.com/u/132554'}
+export const Primary = Template.bind({});
+Primary.args = { imageSrc: "https://avatars2.githubusercontent.com/u/132554" };
 
 // export {}
