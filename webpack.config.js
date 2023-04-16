@@ -10,7 +10,8 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader'
-                ]
+                ],
+                exclude: /node_modules/,
             },
             {
                 test: /\.(png|svg|jpg)$/,
@@ -26,7 +27,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ],
+        extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
         filename: 'bundle.js',

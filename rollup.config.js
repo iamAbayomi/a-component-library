@@ -7,23 +7,23 @@ import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import json from "rollup-plugin-json"
 
-const packageJson = require("./package.json");
+// const packageJson = require("./package.json");
 
-const pkg = process.env.LERNA_PACKAGE_NAME &&
-    require(`${process.env.LERNA_PACKAGE_NAME}/package.json`);
+// const pkg = process.env.LERNA_PACKAGE_NAME &&
+//     require(`${process.env.LERNA_PACKAGE_NAME}/package.json`);
 
-const dependencies = ({ dependencies }) => Object.keys(dependencies || {});
+// const dependencies = ({ dependencies }) => Object.keys(dependencies || {});
 
-const pkgdependencies = dependencies(pkg);
+// const pkgdependencies = dependencies(pkg);
 
-/* exported rollup configuration */
-const config = {
-    /* your config goes here... */
-    /* id is the source name if list of dependencies includes
-     * id source name, then mark it as external,
-     */
-    external: id => pkgdependencies.includes(id)
-};
+// /* exported rollup configuration */
+// const config = {
+//     /* your config goes here... */
+//     /* id is the source name if list of dependencies includes
+//      * id source name, then mark it as external,
+//      */
+//     external: id => pkgdependencies.includes(id)
+// };
 
 
 export default [
@@ -57,5 +57,4 @@ export default [
         plugins: [dts()],
         external: [/\.css$/],
     },
-    config
 ];

@@ -1,7 +1,11 @@
 module.exports = {
   "stories": ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx|mdx)"],
-  "addons": ["@storybook/addon-links", "@storybook/addon-docs", "@storybook/addon-essentials",
-    "@storybook/addon-interactions", '@storybook/preset-create-react-app', '@storybook/addon-a11y', "@storybook/addon-mdx-gfm"],
+  "addons": ["@storybook/addon-links",
+    "@storybook/addon-docs", "@storybook/addon-essentials",
+    '@storybook/addon-postcss',
+    "@storybook/addon-interactions", '@storybook/preset-create-react-app',
+    '@storybook/addon-a11y',
+    "@storybook/addon-mdx-gfm"],
   "staticDirs": ['../public'],
   "framework": {
     name: "@storybook/react-webpack5",
