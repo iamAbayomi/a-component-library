@@ -1,6 +1,6 @@
-import { IAppColors } from "../utils/types";
+// import { IAppColors } from "../utils/types";
 
-export let colors: IAppColors = {
+export let colors = {
     primaryColor: "#1560D7",
     secondaryColor: "#FFFFFF"
 }

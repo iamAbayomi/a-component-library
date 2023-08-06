@@ -1,13 +1,16 @@
 import resolve from "@rollup/plugin-node-resolve";
+import sucrase from '@rollup/plugin-sucrase';
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
+import { dts } from "rollup-plugin-dts";
 import postcss from 'rollup-plugin-postcss'
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+
 import json from "rollup-plugin-json"
 
-// const packageJson = require("./package.json");
+const packageJson = require("./package.json");
 
 // const pkg = process.env.LERNA_PACKAGE_NAME &&
 //     require(`${process.env.LERNA_PACKAGE_NAME}/package.json`);
@@ -43,17 +46,25 @@ export default [
         ],
         plugins: [
             peerDepsExternal(),
-            resolve(),
+            resolve({
+                extensions: ['.js', '.ts']
+            }),
+            sucrase({
+                exclude: ['node_modules/**', 'src/**/*.css'],
+                transforms: ['typescript', 'jsx'],
+            }),
             commonjs(),
-            typescript({ tsconfig: "./tsconfig.json" }),
+            typescript(),
             terser(),
-            postcss()
+            postcss(),
+            nodeResolve()
         ],
         external: ["react", "react-dom", "styled-components"]
     },
     {
-        input: "dist/esm/types/index.d.ts",
-        output: [{ file: "dist/index.d.ts", format: "esm" }],
+        // input: "dist/esm/types/index.d.ts",
+        input: "src/index.ts",
+        output: [{ file: "dist/types.d.ts", format: "es" }],
         plugins: [dts()],
         external: [/\.css$/],
     },
