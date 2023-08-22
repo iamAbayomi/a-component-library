@@ -1,20 +1,23 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "esnext",
+    "module": "ESNext",
     "jsx": "react",
     "sourceMap": true,
     "outDir": "dist",
     "strict": true,
+    "declaration": true,            // Generates .d.ts files
+    "declarationDir": "types",    // Specifies the output directory for .d.ts files   
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "emitDeclarationOnly": true,
     "forceConsistentCasingInFileNames": true,
   },
   "include": ["./src/dec.d.ts"],
   "exclude": [
-    
+    "dist",
     "node_modules",
     "src/**/*.test.tsx",
     "src/**/*.stories.tsx",

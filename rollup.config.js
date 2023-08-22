@@ -29,6 +29,8 @@ const packageJson = require("./package.json");
 // };
 
 
+
+
 export default [
     {
         input: "src/index.ts",
@@ -37,12 +39,15 @@ export default [
                 file: packageJson.main,
                 format: "cjs",
                 sourcemap: true,
+                interop: 'compat',
             },
             {
                 file: packageJson.module,
                 format: "esm",
                 sourcemap: true,
+                interop: 'compat',
             },
+
         ],
         plugins: [
             peerDepsExternal(),
@@ -54,17 +59,19 @@ export default [
                 transforms: ['typescript', 'jsx'],
             }),
             commonjs(),
-            typescript(),
+            typescript({ tsconfig: "./tsconfig.json" }),
+
             terser(),
             postcss(),
-            nodeResolve()
         ],
-        external: ["react", "react-dom", "styled-components"]
+        external: ["react", "react-dom", "styled-components"],
+
+
     },
     {
         // input: "dist/esm/types/index.d.ts",
         input: "src/index.ts",
-        output: [{ file: "dist/types.d.ts", format: "es" }],
+        output: [{ file: "dist/index.d.ts", format: "esm" }],
         plugins: [dts()],
         external: [/\.css$/],
     },
