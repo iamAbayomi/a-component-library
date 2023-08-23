@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true,
+    "target": "es5",
+    "module": "ESNext",
     "jsx": "react",
-    "module": "ESNext",  
-    "declaration": true,
-    "declarationDir": "types",
     "sourceMap": true,
     "outDir": "dist",
+    "strict": true,
+    "declaration": true,            // Generates .d.ts files
+    "declarationDir": "types",    // Specifies the output directory for .d.ts files   
     "moduleResolution": "node",
-    "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "emitDeclarationOnly": true,
     "forceConsistentCasingInFileNames": true,
   },
   "include": ["./src/dec.d.ts"],
